@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Gojo from './pages/DoNotClick'
+import Home from './pages/Home/Home.tsx';
+import About from './pages/About/About.tsx';
+import Gojo from './pages/DoNotClick/DoNotClick.tsx'
 function App() {
     return (
         <BrowserRouter>

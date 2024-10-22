@@ -1,4 +1,4 @@
-import 'C:\\Users\\Сергей\\Desktop\\4 курс\\сии\\react_app\\my-app\\src\\DoNotClick.css'
+import './DoNotClick.css'
 
 function Gojo() {
     return (

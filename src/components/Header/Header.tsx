@@ -1,10 +1,12 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from '../Button/Button';
+import '../Header/Header.css'
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function Header() {
+    const navigate = useNavigate()
     return (
-        <div>
-        <h1>Добро пожаловать!</h1>
+        <div className='header'>
             <Button
                 label="Normal Button"
                 onClick={() => window.open("http://localhost:5173/about")}
@@ -20,4 +22,4 @@ function Home() {
         </div>
     );
 }
-export default Home;
+export default Header;

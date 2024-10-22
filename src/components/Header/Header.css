@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    /* height: 100px;
+    width: 100px;
+    gap: 50px; */
+    background-color: rgb(red, green, blue);
+    /* position: absolute; */
+    top: 0;
+}
