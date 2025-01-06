@@ -1,0 +1,14 @@
+/* src/pages/Contact/Contact.css */
+.contact {
+    padding: 20px;
+  }
+  
+  .contact h1 {
+    color: #333;
+  }
+  
+  .contact p {
+    font-size: 18px;
+    color: #555;
+  }
+  

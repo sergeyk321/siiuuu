@@ -1,0 +1,42 @@
+/* src/pages/CountryDetail/CountryDetail.css */
+.country-detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.country-detail h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.country-detail img.flag {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.country-detail p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  background-color: #45a049;
+}
