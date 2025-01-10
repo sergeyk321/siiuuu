@@ -1,0 +1,102 @@
+.button {
+    flex: 1;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0; 
+  }
+  
+  .button:hover {
+    color: white;
+  }
+  
+  .button.home, .button.about, .button.contact {
+    position: relative;
+    background-color: #333;
+  }
+
+  .button.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('/src/assets/flags.jpg');
+    background-size: 100%; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    transition: left 0.75s ease-in-out; 
+    z-index: 0;
+  }
+  
+  .button.home:hover::before {
+    left: 0;
+  }
+  
+  /* About Button Styling */
+  .button.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('/src/assets/questions.jpg'); 
+    background-size: 100%; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    transition: left 0.75s ease-in-out; 
+    z-index: 0;
+  }
+  
+  .button.about:hover::before {
+    left: 0;
+  }
+
+  /* Contact Button Styling */
+  .button.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('/src/assets/phones.jpg'); 
+    background-size: 100%; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    transition: left 0.75s ease-in-out; 
+    z-index: 0;
+  }
+  
+  .button.contact:hover::before {
+    left: 0; 
+  }
+
+  .button span {
+    position: relative;
+    z-index: 1; 
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .button.home:hover span,
+  .button.about:hover span,
+  .button.contact:hover span {
+    background-color: rgba(0, 0, 0, 0.9); 
+    color: white;
+  }

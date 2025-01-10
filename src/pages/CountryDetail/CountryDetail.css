@@ -1,42 +1,89 @@
-/* src/pages/CountryDetail/CountryDetail.css */
 .country-detail {
-  padding: 20px;
+  padding: 30px;
   max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  background-color: #f9f9f9; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
 .country-detail h1 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.country-detail img.flag {
-  width: 200px;
-  height: auto;
+  font-size: 2.5rem;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
+.country-detail img.flag {
+  width: 250px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px; 
+  border: 2px solid #ddd;
+}
+
 .country-detail p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #4b4b4b; 
+  line-height: 1.8; 
+  margin-bottom: 15px;
+}
+
+.country-detail p strong {
+  color: #2c3e50;
 }
 
 .back-link {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 15px;
+  margin-top: 30px;
+  padding: 12px 20px;
   background-color: #4CAF50;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-link:hover {
   background-color: #45a049;
+  transform: scale(1.05); 
+}
+
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-flag {
+  width: 50vw; 
+  height: auto; 
+  max-height: 50vh; 
+  object-fit: contain; 
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flag {
+  width: 250px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.flag:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }

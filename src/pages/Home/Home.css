@@ -1,28 +1,97 @@
-/* src/pages/Home/Home.css */
+/* Общие стили для домашней страницы */
 .home {
-  padding: 20px;
+  padding: 30px;
+  background-color: #f9f9f9; /* Фоновый цвет для страницы */
+  color: #333;
 }
 
 .home h1 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Немного увеличен размер шрифта */
   margin-bottom: 20px;
+  text-align: center;
+  color: #444; /* Темно-серый цвет заголовка */
 }
 
-.home ul {
-  list-style-type: none;
+/* Сетка стран */
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивная ширина колонок */
+  gap: 20px;
   padding: 0;
+  list-style-type: none;
 }
 
-.home li {
-  margin: 10px 0;
+/* Карточка страны */
+.country-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.country-card:hover {
+  transform: scale(1.05); /* Увеличение при наведении */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+/* Флаг страны */
+.country-flag {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Заполняет пространство с обрезкой */
+  background-color: #f0f0f0; /* Фон для флагов */
+  border-bottom: 2px solid #ddd;
+}
+
+/* Название страны */
+.country-name {
+  font-size: 1.2rem;
+  margin: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Ссылка на карточку */
 .country-link {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #0073e6;
+  color: inherit;
 }
 
-.country-link:hover {
-  text-decoration: underline;
+/* Заголовок региона */
+.region-title {
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+  color: #555;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Группа региона */
+.region-group {
+  margin-bottom: 40px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+  .countries-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на большом экране */
+  }
+}
+
+@media (max-width: 900px) {
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на среднем экране */
+  }
+}
+
+@media (max-width: 600px) {
+  .countries-grid {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных устройствах */
+  }
+
+  .region-title {
+    text-align: center; /* Центрируем заголовки регионов на мобильных устройствах */
+  }
 }
